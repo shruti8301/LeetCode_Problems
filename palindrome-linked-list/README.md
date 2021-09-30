@@ -1,3 +1,4 @@
+[Discussion Post (created on 30/8/2021 at 13:59)](https://leetcode.com/problems/palindrome-linked-list/discuss/1495046/Python-Easy-to-Understand)  
 <h2>234. Palindrome Linked List</h2><h3>Easy</h3><hr><div><p>Given the <code>head</code> of a singly linked list, return <code>true</code> if it is a palindrome.</p>
 
 <p>&nbsp;</p>
