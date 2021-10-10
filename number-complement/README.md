@@ -1,3 +1,4 @@
+[Discussion Post (created on 10/9/2021 at 22:29)](https://leetcode.com/problems/number-complement/discuss/1514739/Easy-Python-Solution)  
 <h2>476. Number Complement</h2><h3>Easy</h3><hr><div><p>The <strong>complement</strong> of an integer is the integer you get when you flip all the <code>0</code>'s to <code>1</code>'s and all the <code>1</code>'s to <code>0</code>'s in its binary representation.</p>
 
 <ul>
