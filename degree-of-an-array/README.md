@@ -1,3 +1,4 @@
+[Discussion Post (created on 1/11/2021 at 21:49)](https://leetcode.com/problems/degree-of-an-array/discuss/1606357/97-faster-python-solution)  
 <h2>697. Degree of an Array</h2><h3>Easy</h3><hr><div><p>Given a non-empty array of non-negative integers <code>nums</code>, the <b>degree</b> of this array is defined as the maximum frequency of any one of its elements.</p>
 
 <p>Your task is to find the smallest possible length of a (contiguous) subarray of <code>nums</code>, that has the same degree as <code>nums</code>.</p>
