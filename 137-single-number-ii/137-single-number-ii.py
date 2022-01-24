@@ -1,6 +1,10 @@
 
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        for i in nums:
-            if nums.count(i)==1:
-                return i
+        a = defaultdict(int)
+        for num in nums:
+            a[num]+=1
+            if a[num] == 3:
+                del a[num]
+        
+        return list(a.keys())[0]
