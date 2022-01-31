@@ -11,13 +11,13 @@ class Solution:
             if len(a) != len(b):
                 return False
             
-            for length in range(1, len(a)):
+            for i in range(1, len(a)):
                 # no swap
-                if f(a[:length], b[:length]) and f(a[length:], b[length:]):
+                if f(a[:i], b[:i]) and f(a[i:], b[i:]):
                     return True
                 
                 # swap
-                if f(a[:length], b[-length:]) and f(a[length:], b[:len(a)-length]):
+                if f(a[:i], b[-i:]) and f(a[i:], b[:len(a)-i]):
                     return True
             return False
         
