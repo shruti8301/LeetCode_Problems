@@ -1,28 +1,19 @@
 class Solution:
-    def furthestBuilding(self, heights: List[int], bricks: int, ladders: int) -> int:
-        # prepare: use a min heap to store each difference(climb) between two contiguous buildings
-        # strategy: use the ladders for the longest climbs and the bricks for the shortest climbs
-        
-        min_heap = []
-        n = len(heights)
-        
-        for i in range(n-1):
-            climb = heights[i+1] - heights[i]
-            
-            if climb <= 0:
+    def furthestBuilding(self, h: List[int], bricks: int, ladders: int) -> int:
+        climb=[]
+        heapq.heapify(climb)
+        for i in range(1,len(h)):
+            if h[i]<h[i-1]:
                 continue
-            
-            # we need to use a ladder or some bricks, always take the ladder at first
-            if climb > 0:
-                heapq.heappush(min_heap, climb)
-            
-            # ladders are all in used, find the current shortest climb to use bricks instead!
-            if len(min_heap) > ladders:
-                # find the current shortest climb to use bricks
-                brick_need = heapq.heappop(min_heap)
-                bricks -= brick_need
-            
-            if bricks < 0:
-                return i
-        
-        return n-1
+            diff = h[i]-h[i-1]
+            if ladders>0:
+                ladders-=1
+                heapq.heappush(climb,diff)
+            else:
+                heapq.heappush(climb,diff)
+                bricks_used = heapq.heappop(climb)
+                if bricks-bricks_used>=0:
+                    bricks-=bricks_used
+                else:
+                    return i-1
+        return len(h)-1
