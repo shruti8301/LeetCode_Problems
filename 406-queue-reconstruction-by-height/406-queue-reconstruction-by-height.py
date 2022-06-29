@@ -1,3 +1,4 @@
+'''
 class Solution:
     def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
         people.sort(key=lambda person: (-person[0], person[1]))
@@ -14,7 +15,6 @@ class Solution:
         arr=[]
         for i in people:
             arr.insert(i[1],i)
-            print(arr)
+            #print(arr)
         return arr
         
-'''
